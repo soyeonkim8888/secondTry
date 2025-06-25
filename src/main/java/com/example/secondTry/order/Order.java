@@ -1,12 +1,5 @@
 package com.example.secondTry.order;
 
-import com.example.secondTry.member.Member;
-import com.example.secondTry.member.Grade;
-import com.example.secondTry.repository.MemberRepository;
-import com.example.secondTry.repository.MemoryMemberRepository;
-import com.example.secondTry.service.MemberService;
-import com.example.secondTry.service.MemberServiceImpl;
-
 public class Order {
 
     private Long memberId;

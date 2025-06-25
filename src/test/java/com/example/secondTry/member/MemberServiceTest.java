@@ -1,13 +1,24 @@
 package com.example.secondTry.member;
 
+import com.example.secondTry.AppConfig;
 import com.example.secondTry.service.MemberService;
 import com.example.secondTry.service.MemberServiceImpl;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MemberServiceTest {
-    MemberService memberService = new MemberServiceImpl();
+    //MemberService memberService = new MemberServiceImpl();
+
+    MemberService memberService;
+
+    @BeforeEach
+    public void beforeEach(){
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+    }
+
     @Test
     void join(){
         //given
